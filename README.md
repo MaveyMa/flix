@@ -44,10 +44,11 @@ GIF created with [LiceCap](http://www.cockos.com/licecap/)
 Describe any challenges encountered while building the app.
 * Sometimes following the walkthroughs won't produce the same results! Learned to poke around styling, heights, autoresizing
 * Learned how to hide my MovieDB API key in my own .plist file so that I could push to my public Github repo safely
-* Learned how to use .gitignore files; they're awesome
-* Learned how Pods allow me to import modules, and the need to regularly Clean/Build
 * Learned not to arrogantly delete Pods I think I do not need; the Pods know what they need! Respect the Pods. 
 * Learned how to `git revert` to previous commits and `git reset --hard HEAD^` during Pod catastrophe
+* Learned how Pods allow me to import modules, and the need to regularly Clean/Build
+* Learned how to use .gitignore files; they're awesome
+
 
 ## License
 
