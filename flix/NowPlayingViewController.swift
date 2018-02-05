@@ -8,6 +8,7 @@
 
 import UIKit
 import AlamofireImage
+import KRProgressHUD
 
 class NowPlayingViewController: UIViewController, UITableViewDataSource {
   
@@ -18,12 +19,18 @@ class NowPlayingViewController: UIViewController, UITableViewDataSource {
   
   override func viewDidLoad() {
     super.viewDidLoad()
+    KRProgressHUD.show()
+    
     
     refreshControl = UIRefreshControl()
     refreshControl.addTarget(self, action: #selector(NowPlayingViewController.didPullToRefresh(_:)), for: .valueChanged)
     tableView.insertSubview(refreshControl, at: 0)
     tableView.dataSource = self
     fetchMovies()
+    
+    DispatchQueue.main.asyncAfter(deadline: .now()+1) {
+      KRProgressHUD.dismiss()
+    }
   }
   
   @objc func didPullToRefresh(_ refreshControl: UIRefreshControl) {
