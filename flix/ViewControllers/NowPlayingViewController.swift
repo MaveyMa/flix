@@ -20,8 +20,7 @@ class NowPlayingViewController: UIViewController, UITableViewDataSource {
   override func viewDidLoad() {
     super.viewDidLoad()
     KRProgressHUD.show()
-    
-    
+
     refreshControl = UIRefreshControl()
     refreshControl.addTarget(self, action: #selector(NowPlayingViewController.didPullToRefresh(_:)), for: .valueChanged)
     tableView.insertSubview(refreshControl, at: 0)
@@ -101,9 +100,13 @@ class NowPlayingViewController: UIViewController, UITableViewDataSource {
     }
   }
   
+  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    tableView.deselectRow(at: indexPath, animated: true)
+  }
+  
+  
   override func didReceiveMemoryWarning() {
     super.didReceiveMemoryWarning()
-    // Dispose of any resources that can be recreated.
   }
   
   
