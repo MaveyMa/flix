@@ -17,6 +17,17 @@ class SuperheroViewController: UIViewController, UICollectionViewDataSource {
   override func viewDidLoad() {
     super.viewDidLoad()
     collectionView.dataSource = self
+    
+    let layout = collectionView.collectionViewLayout as! UICollectionViewFlowLayout
+    layout.minimumInteritemSpacing = 5
+    layout.minimumLineSpacing = layout.minimumInteritemSpacing
+    let cellPerLine: CGFloat = 2
+    let interItemSpacingTotal = layout.minimumInteritemSpacing * (cellPerLine - 1)
+    
+    let width = collectionView.frame.size.width / cellPerLine - interItemSpacingTotal / cellPerLine
+    layout.itemSize = CGSize(width: width, height: width * 3 / 2)
+    
+    
     fetchMovies()
   }
   
@@ -46,7 +57,7 @@ class SuperheroViewController: UIViewController, UICollectionViewDataSource {
       let myKey = dict["myMovieDatabaseAPIKey"] as! String
       
       // 1. Make network request to movie db api
-      let myURL = "https://api.themoviedb.org/3/movie/now_playing?api_key=" + myKey
+      let myURL = "https://api.themoviedb.org/3/movie/284053/similar?api_key=a07e22bc18f5cb106bfe4cc1f83ad8ed&language=en-US&page=1"
       let url = URL(string: myURL)!
       let request = URLRequest(url: url, cachePolicy: .reloadIgnoringLocalCacheData , timeoutInterval: 10)
       let session = URLSession(configuration: .default, delegate: nil, delegateQueue: OperationQueue.main)
