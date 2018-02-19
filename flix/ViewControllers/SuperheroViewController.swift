@@ -57,7 +57,7 @@ class SuperheroViewController: UIViewController, UICollectionViewDataSource {
       let myKey = dict["myMovieDatabaseAPIKey"] as! String
       
       // 1. Make network request to movie db api
-      let myURL = "https://api.themoviedb.org/3/movie/284053/similar?api_key=a07e22bc18f5cb106bfe4cc1f83ad8ed&language=en-US&page=1"
+      let myURL = "https://api.themoviedb.org/3/movie/284054/similar?api_key=" + myKey + "&language=en-US&page=2"
       let url = URL(string: myURL)!
       let request = URLRequest(url: url, cachePolicy: .reloadIgnoringLocalCacheData , timeoutInterval: 10)
       let session = URLSession(configuration: .default, delegate: nil, delegateQueue: OperationQueue.main)
