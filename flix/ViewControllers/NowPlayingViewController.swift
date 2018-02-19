@@ -20,7 +20,9 @@ class NowPlayingViewController: UIViewController, UITableViewDataSource {
   override func viewDidLoad() {
     super.viewDidLoad()
     KRProgressHUD.show()
-
+    tableView.rowHeight = UITableViewAutomaticDimension
+    tableView.estimatedRowHeight = 100
+    
     refreshControl = UIRefreshControl()
     refreshControl.addTarget(self, action: #selector(NowPlayingViewController.didPullToRefresh(_:)), for: .valueChanged)
     tableView.insertSubview(refreshControl, at: 0)
