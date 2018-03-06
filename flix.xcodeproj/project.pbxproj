@@ -10,6 +10,7 @@
 		DB36E47E20291358000D9EFF /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB36E47D20291358000D9EFF /* DetailViewController.swift */; };
 		DB5E6B71202FABC7003B4CB3 /* PosterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5E6B70202FABC7003B4CB3 /* PosterCell.swift */; };
 		DB5E6B73202FAC06003B4CB3 /* SuperheroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5E6B72202FAC06003B4CB3 /* SuperheroViewController.swift */; };
+		DB6C2D5D204E2E4800E28DC3 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6C2D5C204E2E4800E28DC3 /* Movie.swift */; };
 		DB82CC60201FE29900B76AED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB82CC5F201FE29900B76AED /* AppDelegate.swift */; };
 		DB82CC65201FE29900B76AED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB82CC63201FE29900B76AED /* Main.storyboard */; };
 		DB82CC67201FE29900B76AED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB82CC66201FE29900B76AED /* Assets.xcassets */; };
@@ -53,6 +54,7 @@
 		DB36E47D20291358000D9EFF /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		DB5E6B70202FABC7003B4CB3 /* PosterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosterCell.swift; sourceTree = "<group>"; };
 		DB5E6B72202FAC06003B4CB3 /* SuperheroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperheroViewController.swift; sourceTree = "<group>"; };
+		DB6C2D5C204E2E4800E28DC3 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		DB82CC5C201FE29900B76AED /* flix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = flix.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB82CC5F201FE29900B76AED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DB82CC64201FE29900B76AED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -122,23 +124,31 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		DB36E47B202912FC000D9EFF /* ViewControllers */ = {
+		DB36E47B202912FC000D9EFF /* Controller */ = {
 			isa = PBXGroup;
 			children = (
 				DBE9BC0120267BDC00D5EC0A /* NowPlayingViewController.swift */,
 				DB36E47D20291358000D9EFF /* DetailViewController.swift */,
 				DB5E6B72202FAC06003B4CB3 /* SuperheroViewController.swift */,
 			);
-			path = ViewControllers;
+			path = Controller;
 			sourceTree = "<group>";
 		};
-		DB36E47C20291307000D9EFF /* Views */ = {
+		DB36E47C20291307000D9EFF /* View */ = {
 			isa = PBXGroup;
 			children = (
 				DBE9BC082027D60500D5EC0A /* MovieCell.swift */,
 				DB5E6B70202FABC7003B4CB3 /* PosterCell.swift */,
 			);
-			path = Views;
+			path = View;
+			sourceTree = "<group>";
+		};
+		DB6C2D5B204E2E1800E28DC3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DB6C2D5C204E2E4800E28DC3 /* Movie.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		DB82CC53201FE29900B76AED = {
@@ -166,8 +176,9 @@
 		DB82CC5E201FE29900B76AED /* flix */ = {
 			isa = PBXGroup;
 			children = (
-				DB36E47C20291307000D9EFF /* Views */,
-				DB36E47B202912FC000D9EFF /* ViewControllers */,
+				DB6C2D5B204E2E1800E28DC3 /* Model */,
+				DB36E47C20291307000D9EFF /* View */,
+				DB36E47B202912FC000D9EFF /* Controller */,
 				DBE9BC06202688E700D5EC0A /* Keys.plist */,
 				DB82CC5F201FE29900B76AED /* AppDelegate.swift */,
 				DB82CC63201FE29900B76AED /* Main.storyboard */,
@@ -496,6 +507,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB6C2D5D204E2E4800E28DC3 /* Movie.swift in Sources */,
 				DBE9BC0220267BDC00D5EC0A /* NowPlayingViewController.swift in Sources */,
 				DB5E6B71202FABC7003B4CB3 /* PosterCell.swift in Sources */,
 				DB5E6B73202FAC06003B4CB3 /* SuperheroViewController.swift in Sources */,
