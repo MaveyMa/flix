@@ -211,7 +211,8 @@ Describe any challenges encountered while building the app.
   
   Here's a walkthrough of implemented user stories:
   
-  <img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+  Gif may be too big to embed on GitHub. [View here.](https://i.imgur.com/9QkYd1Z.gif)
+  <img src='https://i.imgur.com/9QkYd1Z.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
   
   GIF created with [LiceCap](http://www.cockos.com/licecap/).
   

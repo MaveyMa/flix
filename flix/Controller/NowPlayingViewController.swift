@@ -39,7 +39,7 @@ class NowPlayingViewController: UIViewController, UITableViewDataSource {
   }
   
   func fetchMovies() {
-    MovieApiManager().popularMovies { (movies: [Movie]?, error: Error?) in
+    MovieApiManager().nowPlayingMovies { (movies: [Movie]?, error: Error?) in
       if let movies = movies {
         self.movies = movies
         self.tableView.reloadData()
