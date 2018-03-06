@@ -37,10 +37,7 @@ class SuperheroViewController: UIViewController, UICollectionViewDataSource {
   
   func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
     let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PosterCell", for: indexPath) as! PosterCell
-    let movie = movies[indexPath.item]
-    if movie.posterURL != nil {
-      cell.posterImageView.af_setImage(withURL: movie.posterURL!)
-    }
+    cell.movie = movies[indexPath.item]
     return cell
   }
   
